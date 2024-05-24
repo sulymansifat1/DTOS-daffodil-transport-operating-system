@@ -1,9 +1,7 @@
 <?php
+require('./admin/inc/db_config.php');
 session_start();
 unset($_SESSION['user']);
 session_destroy();
-echo "<script>
-        window.location.href='index.php';
-      </script>";
-
-      ?>
+header("Location: index.php");
+exit;

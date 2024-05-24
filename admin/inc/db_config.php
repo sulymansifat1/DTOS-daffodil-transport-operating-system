@@ -23,7 +23,7 @@ function filteration($data)
 
 function select($sql, $values, $datatypes)
 {
-    $con = $GLOBALS['con'];
+    global $con;
     if ($stmt = mysqli_prepare($con, $sql)) {
         mysqli_stmt_bind_param($stmt, $datatypes, ...$values);
         if (mysqli_stmt_execute($stmt)) {
@@ -41,7 +41,7 @@ function select($sql, $values, $datatypes)
 
 function update($sql, $values, $datatypes)
 {
-    $con = $GLOBALS['con'];
+    global $con;
     if ($stmt = mysqli_prepare($con, $sql)) {
         mysqli_stmt_bind_param($stmt, $datatypes, ...$values);
         if (mysqli_stmt_execute($stmt)) {
@@ -59,7 +59,7 @@ function update($sql, $values, $datatypes)
 
 function delete($sql, $values, $datatypes)
 {
-    $con = $GLOBALS['con'];
+    global $con;
     if ($stmt = mysqli_prepare($con, $sql)) {
         mysqli_stmt_bind_param($stmt, $datatypes, ...$values);
         if (mysqli_stmt_execute($stmt)) {
@@ -77,7 +77,7 @@ function delete($sql, $values, $datatypes)
 
 function insert($sql, $values, $datatypes)
 {
-    $con = $GLOBALS['con'];
+    global $con;
     if ($stmt = mysqli_prepare($con, $sql)) {
         mysqli_stmt_bind_param($stmt, $datatypes, ...$values);
         if (mysqli_stmt_execute($stmt)) {
@@ -92,4 +92,3 @@ function insert($sql, $values, $datatypes)
         die("Query cannot be prepared - insert");
     }
 }
-?>

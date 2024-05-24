@@ -1,6 +1,8 @@
 <?php require('inc/link.php') ?>
 
 <?php
+$user = isset($_SESSION['user']) ? $_SESSION['user'] : null;
+
 $sql = "SELECT `heading_title` FROM `title` WHERE `sr_no` = ?";
 $values = [1];
 $datatypes = 'i';

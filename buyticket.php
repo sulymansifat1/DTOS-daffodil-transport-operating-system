@@ -1,22 +1,36 @@
+<?php require('inc/link.php') ?>
+
+
+<?php
+session_start();
+
+// Check if the user is logged in
+$user = isset($_SESSION['user']) ? $_SESSION['user'] : null;
+?>
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DTOS/BuyTickets</title>
-
-    <!-- All Links -->
-    <?php require('inc/link.php') ?>
-    <?php require('inc/loader.php') ?>
-
+    <title>Buy Ticket</title>
+    <!-- Include CSS files -->
 </head>
 <body>
-        
-    <!-- --------  NAVBER -----  -->
-    <?php require('inc/header.php')?>
-
-    <!-- ------- BUY TICKET SECTION ------- -->
-    <section class="pt-16 md:pt-8 md:pb-2 bg-green-100">
+<?php require('inc/header.php')?>
+    <?php if ($user): ?>
+        <!-- Display this section only when the user is logged in -->
+        <section class="pt-16 md:pt-8 md:pb-2 bg-green-100">
+            <div class="py-6 text-white">
+                <div class="container mx-auto flex flex-col items-center justify-center max-w-lg p-4 lg:max-w-full sm:p-10 lg:flex-row">
+                    <div class="flex flex-col items-center justify-center flex-1 p-4 space-y-3 pb-8 sm:p-8 lg:p-16 bg-gradient-to-tl from-green-400 via-green-500 to-blue-500">
+                        <span class="text-sm">24h Ticket</span>
+                        <p class="text-3xl md:text-5xl font-bold text-center">Use this QR for Instant Access!</p>
+                        <button data-modal-hide="authentication-modal" data-modal-toggle="registration-modal" class="px-8 py-3 mt-6 text-lg font-semibold border rounded sm:mt-12 border-white hover:bg-white hover:text-green-500 duration-300">Buy Ticket</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <?php else: ?>
+        <section class="pt-16 md:pt-8 md:pb-2 bg-green-100">
     <div class="py-6 text-white">
         <div class="container mx-auto flex flex-col items-center justify-center max-w-lg p-4 lg:max-w-full sm:p-10 lg:flex-row">
             <div class="flex flex-col items-center justify-center flex-1 p-4 space-y-3 pb-8 sm:p-8 lg:p-16 bg-gradient-to-tl from-green-400 via-green-500 to-blue-500">
@@ -29,11 +43,8 @@
     </div>
 </section>
 
+    <?php endif; ?>
 
-    <!-- ------- Footer -------- -->
     <?php require('inc/footer.php') ?>
-
-  
-
 </body>
 </html>
