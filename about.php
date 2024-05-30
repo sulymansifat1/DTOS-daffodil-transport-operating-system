@@ -18,7 +18,7 @@
     <!-- ------- HERO SECTION ------- -->
     <section class="py-6 bg-green-100 text-gray-800 pt-24 md:pt-8 md:pb-2">
     <div class="container flex flex-col items-center justify-center p-4 mx-auto sm:p-10">
-        <p class="p-2 text-sm font-medium tracking-wider text-center uppercase">Development team</p>
+        <p class="p-2 md:pt-24 pt-12 text-sm font-medium tracking-wider text-center uppercase">Development team</p>
         <h1 class="text-4xl font-bold leading-none text-center sm:text-5xl">The talented people behind the scenes</h1>
         <div class="flex flex-row flex-wrap-reverse justify-center mt-8">
             <div class="flex flex-col justify-center w-full px-8 mx-6 my-12 text-center rounded-md md:w-96 lg:w-80 xl:w-64 bg-green-200 text-gray-800">

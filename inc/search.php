@@ -1,5 +1,5 @@
 
-<section class=" md:pb-2  text-gray-900 text-center">
+<section class=" md:pb-2 text-gray-900 text-center">
     <div class="container flex flex-col justify-center px-4 py-8 mx-auto ">
         <div class="w-2/3 mx-auto shadow-md rounded-md p-4 bg-white">
             <form id="searchForm" action="searchResult.php" method="GET">

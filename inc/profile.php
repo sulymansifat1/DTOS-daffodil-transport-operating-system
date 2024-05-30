@@ -1,10 +1,7 @@
-<?php require('inc/link.php') ?>
 
 <?php
-session_start();
 
 // Check if the user is logged in
-$user = isset($_SESSION['user']) ? $_SESSION['user'] : null;
 ?>
 <!DOCTYPE html>
 <html>

@@ -77,6 +77,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action']) && $_POST['
     }
 }
 
+if (isset($_GET['profile'])) {
+    if ($user) {
+        // User is logged in, show profile page
+        require_once 'profile.php';
+        exit;
+    } else {
+        // User is not logged in, redirect to index page
+        header("Location: index.php");
+        exit;
+    }
+}
 
 if (isset($_GET['logout'])) {
     // Unset all session variables
@@ -89,8 +100,6 @@ if (isset($_GET['logout'])) {
     header("Location: index.php");
     exit;
 }
-
-
 ?>
 
 <nav class="bg-white fixed w-full z-20 top-0 start-0 border-b border-gray-200">
@@ -117,10 +126,10 @@ if (isset($_GET['logout'])) {
         <div class="flex md:order-2 space-x-3 md:space-x-2 rtl:space-x-reverse">
             <?php if ($user): ?>
                 <!-- User is logged in -->
-                <div class="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+                <div class="flex items-center md:order-2 md:space-x-0 rtl:space-x-reverse">
     <button type="button" class="flex md:me-0 font-bold " id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown" data-dropdown-placement="bottom">
         <span class="sr-only">Open user menu</span>
-        <p class="px-8 py-3  text-lg font-semibold border rounded  border-white hover:bg-white hover:text-green-500 duration-300"><?= $user['fullname'] ?></p>
+        <p class="px-8 py-3  md:text-lg font-semibold border rounded  border-white hover:bg-white hover:text-green-500 duration-300"><?= $user['fullname']?></p>
     </button>
     <!-- Dropdown menu -->
     <div class="z-50 hidden my-4  text-black bg-white" id="user-dropdown">
@@ -129,7 +138,7 @@ if (isset($_GET['logout'])) {
                         </div>
     <ul class="py-2" aria-labelledby="user-menu-button">
             <li>
-                <a href="profile.php" target="_blank" class="block px-4 py-2 text-gray-900 hover:text-white hover:bg-green-500 duration-300 ">Profile</a>
+                <a href="?profile=true"  target="_blank" class="block px-4 py-2 text-gray-900 hover:text-white hover:bg-green-500 duration-300 ">Profile</a>
             </li>
             <li>
                 <a href="?logout=true" class="block px-4 py-2 text-sm text-gray-900 hover:text-white hover:bg-green-500 duration-300  ">Log out</a>
@@ -146,7 +155,12 @@ if (isset($_GET['logout'])) {
                 <button data-modal-target="registration-modal" data-modal-toggle="registration-modal" class="block text-white bg-green-500 hover:bg-green-600 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center" type="button">
                     Register
                 </button>
+
             <?php endif; ?>
+             <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 ms-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="navbar-sticky" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+        </button>
         </div>
     </div>
 </nav>

@@ -36,12 +36,12 @@ if ($result->num_rows > 0) {
     <?php require('inc/header.php')?>
     <!-- ------- HERO SECTION ------- -->
 <section>
-<div class="md:pt-8 overflow-hidden  relative flex items-center min-h-screen">
+<div class="md:pt-24 pt-32 overflow-hidden  relative flex items-center min-h-screen">
   <div class="absolute bg-gradient-to-tr from-green-400 via-green-500 to-blue-500 w-full h-2/3 z-0 top-0" style="border-bottom-left-radius: 50% 20%; border-bottom-right-radius: 50% 20%;"></div>
   <div class="absolute inset-x-auto w-full z-10">
   <div class="container flex flex-col items-center px-4 mx-auto text-center md:px-10 lg:px-32">
   <h1 class="text-white text-5xl font-bold leading-none pt-8 md:pt-0 md:text-6xl md:max-w-3xl"><?php echo $heading_title; ?></h1>
-  <p class=" text-white mt-6 mb-8 text-lg sm:mb-12 xl:max-w-3xl">Daffodil Transport Operating System</p>
+  <p class=" text-white mt-6 mb-8 text-lg xl:max-w-3xl">Daffodil Transport Operating System</p>
     </div>
 
     <?php require('inc/search.php')?>
@@ -85,7 +85,7 @@ if ($result->num_rows > 0) {
             <h5 class="mb-2 text-xl font-semibold tracking-tight text-gray-900">Delay Compensation</h5>
         </a>
         <p class="mb-3 font-normal text-gray-500">If you do not arive on time, you may be entitled to compensation</p>
-        <a href="#" class="inline-flex items-center justify-center w-full px-6 py-3 text-white bg-green-600 rounded-md hover:bg-green-700">
+        <a href="https://forms.gle/dbvzDahiEuhM9h1UA" target="_blank" class="inline-flex items-center justify-center w-full px-6 py-3 text-white bg-green-600 rounded-md hover:bg-green-700">
             Apply now
         </a>
     </div>
