@@ -30,7 +30,6 @@ A clean, student-focused web app for DIU transportation. Search routes, manage s
 - [Usage](#usage)
 - [Security](#security)
 - [Roadmap](#roadmap)
-- [Screenshots](#screenshots)
 - [Authors](#authors)
 - [License](#license)
 - [Acknowledgments](#acknowledgments)
@@ -183,15 +182,6 @@ Implemented/planned:
 - [ ] Real-time bus tracking (IoT)
 - [ ] Caching and load balancing for scalability
 - [ ] Query and code optimizations
-
-## Screenshots
-Add screenshots to `/img` and reference them here. Example placeholders:
-
-<!-- Uncomment and update paths when images are available
-![Home](img/home.png)
-![Search Results](img/search-results.png)
-![Admin Dashboard](admin/img/dashboard.png)
--->
 
 ## Authors
 - Md Sulyman Islam Sifat — ID: 211-15-4004 (Section: 58_D)
