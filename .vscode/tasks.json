@@ -1,0 +1,16 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Initialize git and push to GitHub",
+			"type": "shell",
+			"command": "git init ; git checkout -b main ; git add -A ; git commit -m \"docs: add polished README and final report\" ; git remote add origin git@github.com:sulymansifat1/DTOS-daffodil-transport-operating-system.git ; git push -u origin main",
+			"args": [],
+			"isBackground": false,
+			"problemMatcher": [
+				"$eslint-stylish"
+			],
+			"group": "build"
+		}
+	]
+}
