@@ -14,7 +14,7 @@ A clean, student-focused web app for DIU transportation. Search routes, manage s
 
 > Course: Web Engineering Lab (CSE415) • Project Group: 5 • Submission: 31 May, 2024
 >
-> Report: `DTOS - Final Report.pdf` / `DTOS - Final Report.txt` • Original repo: https://github.com/sulymansifat1/dtos
+> Report: `DTOS - Final Report.pdf` / `DTOS - Final Report.txt` 
 
 ---
 
@@ -39,7 +39,7 @@ A clean, student-focused web app for DIU transportation. Search routes, manage s
 ## Overview
 DTOS is a centralized platform for DIU students to search buses/routes (e.g., DSC ↔ Dhaka city), register/login, and access helpful pages like About and Contact. An Admin Panel manages bus schedules, tickets, and site settings.
 
-Some features are in progress (see Roadmap). The stack is a classic LAMP-style setup with PHP + MySQL and a lightweight HTML/Tailwind frontend.
+The stack is a classic LAMP-style setup with PHP + MySQL and a lightweight HTML/Tailwind frontend.
 
 ## Highlights
 - 🔎 Fast route search from the homepage with route, time, and stop details
